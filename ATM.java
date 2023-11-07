@@ -24,7 +24,7 @@ public class ATM {
                         balance = balance - withdraw;
                         System.out.println("\n=================================================");
                         System.out.println("\nWe're collecting your money, please wait a minute");
-                        System.out.println("\n============Please collect your money============");
+                        System.out.println("\n------------Please collect your money------------");
                         System.out.println("\n=================================================");
                     } else {
                         System.out.println("Insufficient balence");
@@ -36,18 +36,30 @@ public class ATM {
                     } else {
                         System.exit(1);
                     }
-                    break;
                 case 2:
                     System.out.print("\nEnter money to be deposited : ");
                     deposit = sc.nextInt();
                     balance = balance + deposit;
                     System.out.println("\n================================================\n");
-                    System.out.println("===Your money has been successfully deposited===");
+                    System.out.println("---Your money has been successfully deposited---");
                     System.out.println("\n================================================\n");
-                    break;
+                    System.out.print("\nBack to menu? (0 = yes, 1 = no)   ");
+                    back = sc.next();
+                    if (back.equalsIgnoreCase("0")) {
+                        continue;
+                    } else {
+                        System.exit(1);
+                    }
                 case 3:
                     System.out.println("\nBalance     :   " + balance);
                     System.out.println("");
+                    System.out.print("\nBack to menu? (0 = yes, 1 = no)   ");
+                    back = sc.next();
+                    if (back.equalsIgnoreCase("0")) {
+                        continue;
+                    } else {
+                        System.exit(1);
+                    }
                 case 4:
                     System.exit(0);
                 default:
